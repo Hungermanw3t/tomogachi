@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tomogachi.MainPage">
+
+    <StackLayout>
+        <Frame CornerRadius="10" BackgroundColor="#8428d4" Margin="20">
+            <Label Text="tomogachi" x:Name="PetNameLabel" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"  />
+        </Frame>
+
+        <Image Source="cheese" Rotation="50" x:Name="PetImage"/>
+
+
+        <Grid Margin="20" HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Button Text="Hunger: " x:Name="HungerLabel" FontSize="Body" Padding="5"  Grid.Column="0" Clicked="HungerLabel_Clicked"/>
+
+
+            <Button Text="Happy: " x:Name="HappyLabel" FontSize="Body"  Padding="1" Grid.Column="1" Clicked="HappyLabel_Clicked"/>
+
+
+            <Button Text="Awake: " x:Name="awakeLabel" FontSize="Body" Padding="1" Grid.Column="2" Clicked="awakeLabel_Clicked"/>
+            
+        </Grid>
+
+        <Button Text="Change Name" x:Name="ChangeName" Clicked="ChangeNameEvent"/>
+    </StackLayout>
+
+</ContentPage>
